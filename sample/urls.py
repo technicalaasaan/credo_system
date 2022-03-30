@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from student.views import home, student, StudentView, StudentDetailView, StudentCreateView, StudentUpdateView, StudentDeleteView
 
 urlpatterns = [
+    path('', home),
+    path('student_func/', student), # function based
+    path('student/', StudentView.as_view()), # List View
+    path('student/<pk>/', StudentDetailView.as_view()), # Detail View
+    path('student_add/', StudentCreateView.as_view()),
+    path('student/<pk>/update/', StudentUpdateView.as_view()),
+    path('student/<pk>/delete/', StudentDeleteView.as_view()),
     path('admin/', admin.site.urls),
 ]

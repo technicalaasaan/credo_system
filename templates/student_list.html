@@ -1,0 +1,32 @@
+<html>
+<titile> django view </titile>
+<body>
+<table>
+   <thead>
+   <tr>
+      <th>Name </th>
+      <th>Age </th>
+      <th>Class </th>
+      <th>Department </th>
+   </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>
+            {{ object.stu_name }}
+         </td>
+         <td>
+            {{ object.stu_age }}
+         </td>
+         <td>
+            {{ object.stu_class }}
+         </td>
+         <td>
+            {{ object.stu_dept.dept_name }}
+         </td>
+      </tr>
+   </tbody>
+
+</table>
+</body>
+</html>

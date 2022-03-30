@@ -1,0 +1,34 @@
+<html>
+<titile> django view </titile>
+<body>
+<table>
+   <thead>
+   <tr>
+      <th>Name </th>
+      <th>Age </th>
+      <th>Class </th>
+      <th>Department </th>
+   </tr>
+   </thead>
+   <tbody>
+      {% for stu in object_list %}
+      <tr>
+         <td>
+            {{ stu.stu_name }}
+         </td>
+         <td>
+            {{ stu.stu_age }}
+         </td>
+         <td>
+            {{ stu.stu_class }}
+         </td>
+         <td>
+            {{ stu.stu_dept.dept_name }}
+         </td>
+      </tr>
+      {% endfor %}
+   </tbody>
+
+</table>
+</body>
+</html>
