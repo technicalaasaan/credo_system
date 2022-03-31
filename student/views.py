@@ -10,7 +10,11 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    data = {'name': request.GET.get('user', 'Credo')}
+    return render(request, 'index.html', context={})
+
+def staff(request):
+    return render(request, 'staff/home.html')
 
 # function based views (FBV)
 @csrf_exempt
@@ -23,7 +27,7 @@ def student(request):
         else:
             stu_data = Student.objects.all()
         print('stu_data', stu_data)
-        return render(request, 'student.html', {'data': stu_data})
+        return render(request, 'index.html', {'data': stu_data, 'value': range(10) })
     elif request.method == 'POST':
         data = eval(request.body)
         dept = Department.objects.get(dept_name=data['stu_dept'])
