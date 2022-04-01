@@ -4801,6 +4801,10 @@ textarea.form-control-lg {
   list-style: none;
 }
 
+#page-top {
+    margin-top: 50px;
+}
+
 .page-link {
   position: relative;
   display: block;
@@ -11354,6 +11358,7 @@ html {
 }
 
 #mainNav {
+  height: 50px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

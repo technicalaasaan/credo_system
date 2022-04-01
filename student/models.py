@@ -52,3 +52,14 @@ class Examination(models.Model):
 
     class Meta:
         db_table = 'exam'
+
+class Staff(models.Model):
+    staff_id = models.AutoField(primary_key=True)
+    staff_name = models.CharField(max_length=100)
+    staff_dob = models.DateField()
+    staff_dept = models.ForeignKey(Department, on_delete=models.CASCADE)
+    mobile = models.CharField(max_length=12)
+    address = models.TextField(null=False)
+
+    class Meta:
+        db_table = 'staff'
